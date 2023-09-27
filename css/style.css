@@ -138,6 +138,7 @@ nav a:focus, nav a:hover {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   column-gap: 15px;
+  row-gap: 15px;
 }
 
 img{
@@ -190,11 +191,18 @@ first div in the grid  and place it in the grid.   .container:first-child */
 
  /* Step 8: Write the selector/rule property to style the .text-block class. */
 
+
  .text-block{
   margin: auto;
   max-height: 250px;
   overflow: auto;
  }
+
+ .text-block:focus{
+  overflow: visible;
+ }
+
+
 
 
 /* Add your media query here */
@@ -215,8 +223,13 @@ nav{
     grid-template-columns: 50px auto 500px auto 50px;
   }
 
-  .about, .clients, .method-image, .conatct-image{
+  .about, .clients, .method-image{
     grid-column: 3/5;
+  }
+
+  .conatct-image{
+    grid-column-start: 3;
+    grid-column-end: -1;
   }
 
 
